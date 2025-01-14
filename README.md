@@ -1,6 +1,7 @@
 # PPGEEC2318-Machine-Learning-Otimiza-o-e-Visualiza-o-no-Aprendizado-Profundo
 
-Inspirado pelo autor do livro Deep Learning with PyTorch Step-by-Step, este repositório é uma extensão do artigo publicado no Medium ["Título do Artigo"](colocar link), criado para aprofundar o entendimento dos conceitos apresentados, com ênfase no uso e integração das funções no PyTorch.
+Inspirado pelo autor do livro Deep Learning with PyTorch Step-by-Step, este repositório é uma extensão do artigo publicado no Medium ["Otimização e Visualização no Aprendizado Profundo: Explorando Gradientes, Otimizadores e Schedulers"](https://medium.com/@paulo.eduardo.093/otimiza%C3%A7%C3%A3o-e-visualiza%C3%A7%C3%A3o-no-aprendizado-profundo-explorando-gradientes-otimizadores-e-schedulers-d56f1a1d530e), criado para aprofundar o entendimento dos conceitos apresentados, com ênfase no uso e integração das funções no PyTorch.
+
 
 As simulações foram realizadas no Google Colab, utilizando um novo dataset, disponível em [![Kaggle](https://img.shields.io/badge/Kaggle-119ebd?style=plastic&logoColor=white)](https://www.kaggle.com/datasets/tongpython/cat-and-dog/data). Esse dataset contém imagens de gatos e cachorros, totalizando aproximadamente 1.012 imagens para cada classe.
 
