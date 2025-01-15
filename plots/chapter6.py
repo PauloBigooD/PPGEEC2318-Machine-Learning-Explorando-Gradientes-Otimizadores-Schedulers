@@ -61,7 +61,7 @@ def calc_corrected_ewma(values, period):
 
 def figure2(first_images, first_labels):
     fig, axs = plt.subplots(1, 6, figsize=(12, 4))
-    titles = ['Paper', 'Rock', 'Scissors']
+    titles = ['Cat', 'Dog']
     for i in range(6):
         image, label = ToPILImage()(first_images[i]), first_labels[i]
         axs[i].imshow(image)
