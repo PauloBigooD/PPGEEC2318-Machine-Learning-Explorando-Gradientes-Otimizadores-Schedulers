@@ -73,5 +73,5 @@ if IS_BINDER:
 def config_chapter6(branch='main'):
     if IS_COLAB:
         print('Downloading files from GitHub repo to Colab...')
-        download_to_colab(0, branch)
+        download_to_colab(6, branch)
         print('Finished!')
