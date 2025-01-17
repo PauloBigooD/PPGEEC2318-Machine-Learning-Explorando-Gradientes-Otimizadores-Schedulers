@@ -13,9 +13,11 @@ def tensorboard_cleanup():
 
 FOLDERS = {
     0: ['plots', 'stepbystep', 'stepbystep', 'data_generation', 'data_preparation'],
+    6: ['chapter6_files'],  # Adicione as pastas para o capítulo 6
 }
 FILENAMES = {
     0: ['chapter6.py', 'v2.py', 'v3.py', 'simple_linear_regression.py', 'v2.py'],
+    6: ['example_file1.py'],  # Adicione os nomes dos arquivos para o capítulo 6
 }
 
 try:
