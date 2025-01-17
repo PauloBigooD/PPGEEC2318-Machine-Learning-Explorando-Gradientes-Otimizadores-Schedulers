@@ -16,11 +16,11 @@ FOLDERS = {
 }
 FILENAMES = {
         6: [ # Add filenames for chapter 6 here
-            'data_generation/simple_linear_regression.py',
-            'data_preparation/v2.py',
             'plots/chapter6.py',
             'stepbystep/v2.py',
-            'stepbystep/v3.py'
+            'stepbystep/v3.py',
+            'data_generation/simple_linear_regression.py',
+            'data_preparation/v2.py'   
        ]
 }
 try:
