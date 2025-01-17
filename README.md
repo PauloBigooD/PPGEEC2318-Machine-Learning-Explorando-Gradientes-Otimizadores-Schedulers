@@ -1,80 +1,103 @@
-# PPGEEC2318-Machine-Learning-Otimiza-o-e-Visualiza-o-no-Aprendizado-Profundo
 
-Inspirado pelo autor do livro Deep Learning with PyTorch Step-by-Step, este repositório é uma extensão do artigo publicado no Medium ["Otimização e Visualização no Aprendizado Profundo: Explorando Gradientes, Otimizadores e Schedulers"](https://medium.com/@paulo.eduardo.093/otimiza%C3%A7%C3%A3o-e-visualiza%C3%A7%C3%A3o-no-aprendizado-profundo-explorando-gradientes-otimizadores-e-schedulers-d56f1a1d530e), criado para aprofundar o entendimento dos conceitos apresentados, com ênfase no uso e integração das funções no PyTorch.
+# PPGEEC2318 - Machine Learning: Otimização e Visualização no Aprendizado Profundo
 
+Inspirado pelo livro *Deep Learning with PyTorch Step-by-Step*, este repositório é uma extensão do artigo publicado no Medium: ["Otimização e Visualização no Aprendizado Profundo: Explorando Gradientes, Otimizadores e Schedulers"](https://medium.com/@paulo.eduardo.093/otimiza%C3%A7%C3%A3o-e-visualiza%C3%A7%C3%A3o-no-aprendizado-profundo-explorando-gradientes-otimizadores-e-schedulers-d56f1a1d530e). Ele foi criado para aprofundar o entendimento dos conceitos apresentados, com foco no uso integrado de funções no PyTorch.
 
-As simulações foram realizadas no Google Colab, utilizando um novo dataset, disponível em [![Kaggle](https://img.shields.io/badge/Kaggle-119ebd?style=plastic&logoColor=white)](https://www.kaggle.com/datasets/tongpython/cat-and-dog/data). Esse dataset contém imagens de gatos e cachorros, totalizando aproximadamente 1.012 imagens para cada classe.
+As simulações utilizam o dataset de gatos e cachorros, disponível no [Kaggle](https://www.kaggle.com/datasets/tongpython/cat-and-dog/data). O dataset possui cerca de 1.012 imagens para cada classe, sendo processado através de um pipeline otimizado de padronização de imagens e carregamento eficiente.
 
-No repositório, desenvolvemos um método para padronizar as imagens de forma eficiente, utilizando um carregador de dados temporário. Além disso, adotamos um modelo mais sofisticado, que inclui camadas de dropout para regularização.
-
-O foco também foi ampliado para o processo de treinamento, com atenção especial a taxas de aprendizado, otimizadores e schedulers. Diversos métodos foram implementados, incluindo:
-
-- Descoberta de taxas de aprendizado ideais;
-- Captura de gradientes e parâmetros do modelo;
-- Atualização dinâmica da taxa de aprendizado por meio de schedulers.
-
+### Principais abordagens:
+- Padronização e carregamento eficiente de dados com PyTorch;
+- Uso de dropout para regularização;
+- Exploração de otimizadores, schedulers e gradientes;
+- Descoberta de taxas de aprendizado ideais e ajuste dinâmico de parâmetros.
 
 ---
 
-## 1. Usar o Google Colab
-Google Colab é uma plataforma gratuita baseada em nuvem para executar notebooks.
+## Como usar o notebook **PuttingAllTogether.ipynb**
 
-### Passos:
-1. **Abrir no Colab diretamente**:
-   - Acesse o repositório no GitHub.
-   - Substitua `github.com` no link por `colab.research.google.com/github`. Por exemplo:
-     ```
-     https://github.com/usuario/repositorio/blob/main/notebook.ipynb
-     ```
-     Torne-se:
-     ```
-     https://colab.research.google.com/github/usuario/repositorio/blob/main/notebook.ipynb
-     ```
-
-2. **Ou abra manualmente no Colab**:
-   - Copie o URL do arquivo `.ipynb` no GitHub.
-   - Abra o [Google Colab](https://colab.research.google.com/).
-   - Clique em **File > Open notebook** (Arquivo > Abrir notebook).
-   - Vá até a aba **GitHub**, cole o URL e carregue o notebook.
-
-3. Execute as células no Colab diretamente.
+Este notebook integra todos os conceitos apresentados no repositório, desde o pré-processamento dos dados até o ajuste de hiperparâmetros durante o treinamento. Abaixo, seguem instruções detalhadas para utilizá-lo em diferentes ambientes.
 
 ---
 
-## 2. Usar o VS Code
-Se você prefere executar localmente, o VS Code é uma ótima ferramenta.
+### 1. Usando o Google Colab
 
-### Passos:
-1. **Baixar o notebook do GitHub**:
-   - No GitHub, clique em **Raw** no arquivo `.ipynb` e salve o conteúdo como um arquivo local (Ctrl+S ou Cmd+S).
+O **Google Colab** permite executar notebooks diretamente no navegador, sem a necessidade de configurar um ambiente local.
+
+#### Passos:
+1. **Acessar o notebook no Colab**:
+   - No GitHub, copie o link do arquivo **PuttingAllTogether.ipynb**.
+   - Substitua `github.com` no URL por `colab.research.google.com/github`. Por exemplo:
+     ```
+     https://github.com/usuario/repositorio/blob/main/PuttingAllTogether.ipynb
+     ```
+     Torna-se:
+     ```
+     https://colab.research.google.com/github/usuario/repositorio/blob/main/PuttingAllTogether.ipynb
+     ```
+   - Cole o link no navegador para abrir o notebook diretamente no Colab.
+
+2. **Executar o notebook**:
+   - Conecte-se ao ambiente de execução clicando em **Connect** (Conectar).
+   - Execute as células do notebook sequencialmente (Shift+Enter).
+
+3. **Configurar bibliotecas** (se necessário):
+   - Certifique-se de instalar as dependências listadas no início do notebook. Execute o comando:
+     ```bash
+     !pip install -r requirements.txt
+     ```
+
+---
+
+### 2. Usando o VS Code
+
+Se preferir trabalhar localmente, o **VS Code** é uma ferramenta poderosa e personalizável.
+
+#### Passos:
+1. **Baixar o notebook**:
+   - No GitHub, clique no arquivo **PuttingAllTogether.ipynb** e, em seguida, em **Raw**.
+   - Salve o arquivo localmente como `.ipynb`.
 
 2. **Abrir no VS Code**:
-   - Certifique-se de ter a extensão **Jupyter** instalada no VS Code.
-   - Abra o arquivo `.ipynb` no VS Code.
-   - Clique em **Run All** ou execute célula por célula.
+   - Certifique-se de ter a extensão **Jupyter** instalada.
+   - Abra o arquivo no VS Code e configure um kernel Python compatível.
 
-3. **Configure o ambiente Python**:
-   - Instale o Python e as bibliotecas necessárias no seu ambiente virtual.
+3. **Configurar dependências**:
+   - Crie um ambiente virtual e instale as bibliotecas necessárias:
+     ```bash
+     python -m venv .env
+     source .env/bin/activate   # No Windows: .env\Scripts\activate
+     pip install -r requirements.txt
+     ```
+
+4. **Executar o notebook**:
+   - Use o comando **Run All** ou execute célula por célula.
 
 ---
 
-## 3. Usar Jupyter Notebook Localmente
-Outra opção é usar o Jupyter Notebook na sua máquina.
+### 3. Usando Jupyter Notebook Localmente
 
-### Passos:
-1. **Baixar o notebook**:
-   - Faça o download do arquivo `.ipynb` no GitHub.
+Outra opção é executar o notebook no ambiente local utilizando o **Jupyter Notebook**.
 
-2. **Instalar Jupyter**:
-   - Certifique-se de ter o Jupyter instalado no seu ambiente Python:
+#### Passos:
+1. **Instalar o Jupyter Notebook**:
+   - Instale o Jupyter no seu ambiente Python:
      ```bash
      pip install notebook
      ```
 
-3. **Executar o notebook**:
-   - No terminal, navegue até a pasta onde o arquivo `.ipynb` está salvo.
-   - Execute o comando:
+2. **Baixar o notebook**:
+   - Faça o download do arquivo **PuttingAllTogether.ipynb** no GitHub.
+
+3. **Executar o Jupyter**:
+   - Navegue até a pasta onde o arquivo foi salvo e execute:
      ```bash
      jupyter notebook
      ```
-   - Seu navegador abrirá o ambiente do Jupyter, onde você pode carregar e executar o notebook.
+   - O ambiente será aberto no navegador, onde você poderá executar o notebook.
+
+4. **Configurar dependências**:
+   - Instale as bibliotecas necessárias antes de executar as células.
+
+---
+
+Se precisar de ajuda ou encontrar problemas, sinta-se à vontade para abrir uma *issue* no repositório. Feedbacks são sempre bem-vindos! 😊
