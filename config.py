@@ -15,7 +15,13 @@ FOLDERS = {
     6: ['plots','stepbystep','stepbystep','data_generation', 'data_preparation']  # Add chapter 6 entr
 }
 FILENAMES = {
-    6: ['chapter6.py', 'v2.py', 'v3.py', 'simple_linear_regression.py', 'v2.py']
+        6: [ # Add filenames for chapter 6 here
+            'data_generation/simple_linear_regression.py',
+            'data_preparation/v2.py',
+            'plots/chapter6.py',
+            'stepbystep/v2.py',
+            'stepbystep/v3.py'
+       ]
 }
 try:
     host = os.environ['BINDER_SERVICE_HOST']
