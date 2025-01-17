@@ -11,16 +11,13 @@ def tensorboard_cleanup():
     info_dir = manager._get_info_dir()
     shutil.rmtree(info_dir)
 
-    # Add chapter 6 to the dictionaries if it doesn't exist
-FOLDERS.setdefault(chapter, [])  # Empty list if chapter not found
-FILENAMES.setdefault(chapter, [])  # Empty list if chapter not found
-
 FOLDERS = {
-    6: ['stepbystep/v2', 'stepbystep/v3', 'plots/chapter6', 'data_generation', 'data_preparation'],
+    0: ['plots', 'stepbystep', 'stepbystep', 'data_generation', 'data_generation', 'data_preparation'],
 }
 FILENAMES = {
-    6: ['stepbystep/v2/__init__.py', 'stepbystep/v2/stepbystep.py', 'stepbystep/v3/__init__.py', 'stepbystep/v3/stepbystep.py', 'plots/chapter6/__init__.py', 'plots/chapter6/plots.py', 'data_generation/simple_linear_regression.py', 'data_preparation/v2.py'],
+    0: ['chapter6.py', 'v2.py', 'v3.py', 'rps.py', 'simple_linear_regression.py', 'v2.py'],
 }
+
 try:
     host = os.environ['BINDER_SERVICE_HOST']
     IS_BINDER = True
@@ -35,7 +32,7 @@ except ModuleNotFoundError:
 
 IS_LOCAL = (not IS_BINDER) and (not IS_COLAB)
 
-def download_to_colab(chapter, branch='main'):    
+def download_to_colab(chapter, branch='master'):    
     base_url = 'https://raw.githubusercontent.com/PauloBigooD/PPGEEC2318-Machine-Learning-Explorando-Gradientes-Otimizadores-Schedulers/{}/'.format(branch)
 
     folders = FOLDERS[chapter]
@@ -71,7 +68,7 @@ if IS_BINDER:
     </script>
     ''')
 
-def config_chapter6(branch='main'):
+def config_chapter6(branch='master'):
     if IS_COLAB:
         print('Downloading files from GitHub repo to Colab...')
         download_to_colab(6, branch)
