@@ -32,7 +32,7 @@ except ModuleNotFoundError:
 
 IS_LOCAL = (not IS_BINDER) and (not IS_COLAB)
 
-def download_to_colab(chapter, branch='master'):    
+def download_to_colab(chapter, branch='main'):    
     base_url = 'https://raw.githubusercontent.com/PauloBigooD/PPGEEC2318-Machine-Learning-Explorando-Gradientes-Otimizadores-Schedulers/{}/'.format(branch)
 
     folders = FOLDERS[chapter]
@@ -68,7 +68,7 @@ if IS_BINDER:
     </script>
     ''')
 
-def config_chapter6(branch='master'):
+def config_chapter6(branch='main'):
     if IS_COLAB:
         print('Downloading files from GitHub repo to Colab...')
         download_to_colab(0, branch)
