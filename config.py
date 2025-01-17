@@ -16,12 +16,10 @@ FOLDERS.setdefault(chapter, [])  # Empty list if chapter not found
 FILENAMES.setdefault(chapter, [])  # Empty list if chapter not found
 
 FOLDERS = {
-    6: ['plots']  # Add chapter 6 entr
+    6: ['stepbystep/v2', 'stepbystep/v3', 'plots/chapter6', 'data_generation', 'data_preparation'],
 }
 FILENAMES = {
-        6: [ # Add filenames for chapter 6 here
-            'plots/chapter6.py',   
-       ]
+    6: ['stepbystep/v2/__init__.py', 'stepbystep/v2/stepbystep.py', 'stepbystep/v3/__init__.py', 'stepbystep/v3/stepbystep.py', 'plots/chapter6/__init__.py', 'plots/chapter6/plots.py', 'data_generation/simple_linear_regression.py', 'data_preparation/v2.py'],
 }
 try:
     host = os.environ['BINDER_SERVICE_HOST']
