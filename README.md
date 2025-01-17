@@ -98,6 +98,3 @@ Outra opção é executar o notebook no ambiente local utilizando o **Jupyter No
 4. **Configurar dependências**:
    - Instale as bibliotecas necessárias antes de executar as células.
 
----
-
-Se precisar de ajuda ou encontrar problemas, sinta-se à vontade para abrir uma *issue* no repositório. Feedbacks são sempre bem-vindos! 😊
