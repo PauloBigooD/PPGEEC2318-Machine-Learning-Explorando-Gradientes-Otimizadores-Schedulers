@@ -12,10 +12,10 @@ def tensorboard_cleanup():
     shutil.rmtree(info_dir)
 
 FOLDERS = {
-    6: ['plots', 'stepbystep', 'stepbystep', 'data_generation', 'data_preparation'],
+    0: ['plots', 'stepbystep', 'stepbystep', 'data_generation', 'data_preparation'],
 }
 FILENAMES = {
-    6: ['chapter6.py', 'v2.py', 'v3.py', 'simple_linear_regression.py', 'v2.py'],
+    0: ['chapter6.py', 'v2.py', 'v3.py', 'simple_linear_regression.py', 'v2.py'],
 }
 
 try:
@@ -71,5 +71,5 @@ if IS_BINDER:
 def config_chapter6(branch='master'):
     if IS_COLAB:
         print('Downloading files from GitHub repo to Colab...')
-        download_to_colab(6, branch)
+        download_to_colab(0, branch)
         print('Finished!')
