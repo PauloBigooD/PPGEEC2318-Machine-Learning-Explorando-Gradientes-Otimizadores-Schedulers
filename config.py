@@ -12,12 +12,10 @@ def tensorboard_cleanup():
     shutil.rmtree(info_dir)
 
 FOLDERS = {
-    6: ['plots', 'stepbystep', 'stepbystep', 'data_generation', 'data_preparation'],
+    6: ['plots/chapter6', 'data_generation', 'data_preparation', 'stepbystep/v2', 'stepbystep/v3'],  # Add chapter 6 entr
 }
 FILENAMES = {
-    6: ['chapter6.py', 'v2.py', 'v3.py', 'simple_linear_regression.py', 'v2.py'],
-}
-
+    6: ['chapter6.py', 'simple_linear_regression.py', 'v2.py', 'v2.py', 'v3.py'],  # Add chapter 6 entry
 try:
     host = os.environ['BINDER_SERVICE_HOST']
     IS_BINDER = True
