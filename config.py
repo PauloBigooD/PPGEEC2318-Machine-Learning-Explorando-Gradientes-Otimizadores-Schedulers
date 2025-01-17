@@ -12,12 +12,10 @@ def tensorboard_cleanup():
     shutil.rmtree(info_dir)
 
 FOLDERS = {
-    0: [],
-    6: ['plots', 'stepbystep', 'stepbystep', 'data_generation', 'data_preparation'],  # Adicione as pastas para o capítulo 6
+    6: ['book_chapter','plots', 'stepbystep', 'stepbystep', 'data_generation', 'data_generation', 'data_preparation'],
 }
 FILENAMES = {
-    0: [],
-    6: ['chapter6.py', 'v2.py', 'v3.py', 'simple_linear_regression.py', 'v2.py'],  # Adicione os nomes dos arquivos para o capítulo 6
+    6: ['Chapter-6-Deep-learning-pytorch-step-443-524.pdf','chapter6.py', 'v2.py', 'v3.py', 'rps.py', 'simple_linear_regression.py', 'v2.py'],
 }
 
 try:
