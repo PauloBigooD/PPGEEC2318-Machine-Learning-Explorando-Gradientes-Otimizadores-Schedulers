@@ -12,10 +12,10 @@ def tensorboard_cleanup():
     shutil.rmtree(info_dir)
 
 FOLDERS = {
-    6: ['plots', 'stepbystep', 'stepbystep', 'data_generation', 'data_generation', 'data_preparation'],
+    6: ['plots', 'stepbystep', 'stepbystep', 'data_generation', 'data_preparation'],
 }
 FILENAMES = {
-    6: ['chapter6.py', 'v2.py', 'v3.py', 'rps.py', 'simple_linear_regression.py', 'v2.py'],
+    6: ['chapter6.py', 'v2.py', 'v3.py', 'simple_linear_regression.py', 'v2.py'],
 }
 
 try:
