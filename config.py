@@ -11,6 +11,10 @@ def tensorboard_cleanup():
     info_dir = manager._get_info_dir()
     shutil.rmtree(info_dir)
 
+    # Add chapter 6 to the dictionaries if it doesn't exist
+FOLDERS.setdefault(chapter, [])  # Empty list if chapter not found
+FILENAMES.setdefault(chapter, [])  # Empty list if chapter not found
+
 FOLDERS = {
     6: ['plots']  # Add chapter 6 entr
 }
